@@ -6,11 +6,11 @@ include_directories( . include silk silk/fixed celt )
 
 set( CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -DNULL=0 -DSOCKLEN_T=socklen_t -DLOCALE_NOT_USED -D_LARGEFILE_SOURCE=1 -D_FILE_OFFSET_BITS=64 -Drestrict='' -D__EMX__ -DOPUS_BUILD -DFIXED_POINT=1 -DDISABLE_FLOAT_API -DUSE_ALLOCA -DHAVE_LRINT -DHAVE_LRINTF" )
 
-# set( CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O3 -fno-math-errno" )
+set( CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O3 -fno-math-errno" )
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DBSD=1")
 
-# set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -ffast-math -O3 -funroll-loops")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -ffast-math -O3 -funroll-loops")
 
 add_definitions(-DOPUS_VERSION="\\"1.1.4\\"")
 
