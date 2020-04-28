@@ -95,7 +95,11 @@ extern "C" {
 #  define OPUS_RESTRICT
 # endif
 #else
-# define OPUS_RESTRICT restrict
+# if defined ( __clang__ )
+#  define OPUS_RESTRICT
+# else
+#  define OPUS_RESTRICT restrict
+# endif
 #endif
 
 #if (!defined(__STDC_VERSION__) || (__STDC_VERSION__ < 199901L) )
